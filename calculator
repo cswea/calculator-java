@@ -1,0 +1,118 @@
+import java.util.Scanner;
+
+class Main {
+    
+  static int myMethod(int choice1, double number1, double number2) {
+    Scanner things2 = new Scanner(System.in);
+    double  loop = 1;
+    String choices = "";
+    int choice2 = 0;
+    while (loop <= 100){
+      try {
+        if (choice1 == 1){
+          System.out.println("Is this what you wanted?\n" + number1 + " + " + number2 + "\n1) Yes\n2) No");
+          choices = things2.nextLine();
+          choice2 = Integer.parseInt(choices);
+          if (choice2 == 1){
+            System.out.println(number1 + number2);
+          }
+          else if (choice2 == 2);{
+            return 1;
+          } 
+        }
+        if (choice1 == 2){
+          System.out.println("Is this what you wanted?\n" + number1 + " - " + number2 + "\n1) Yes\n2) No");
+          choices = things2.nextLine();
+          choice2 = Integer.parseInt(choices);
+          if (choice2 == 1){
+            System.out.println(number1 - number2);
+          }
+          else if (choice2 == 2);{
+            return 1;
+          }
+        }
+        if (choice1 == 3){
+          System.out.println("Is this what you wanted?\n" + number1 + " * " + number2 + "\n1) Yes\n2) No");
+          choices = things2.nextLine();
+          choice2 = Integer.parseInt(choices);
+          if (choice2 == 1){
+            System.out.println(number1 * number2);
+          }
+          else if (choice2 == 2);{
+            return 1;
+          }
+        }
+        if (choice1 == 4){
+          System.out.println("Is this what you wanted?\n" + number1 + " / " + number2 + "\n1) Yes\n2) No");
+          choices = things2.nextLine();
+          choice2 = Integer.parseInt(choices);
+          if (choice2 == 1){
+            System.out.println(number1 / number2);
+          }
+          else if (choice2 == 2);{
+            return 1;
+          }
+        }
+      } 
+      catch (Exception e) {
+        System.out.println("please type in only numbers . . . YOU FOOL!");
+      }
+    }
+    return 2;
+  }
+  
+  public static void main(String[] args) {
+    Scanner things = new Scanner(System.in);
+    int loop2 = 2;
+    int loop3 = 1;
+    int loop4 = 2;
+    String functions = "";
+    int function = 0;
+    double num1 = 0;
+    double num2 = 0;
+    int longL = 0;
+
+    while (loop2 <= 100){
+      longL = 2;
+      try {
+        while (loop3 == 1){
+          System.out.println("Would you like to \n1) add \n2) subtract \n3) multiply \n4) or divide?");
+          functions = things.nextLine();
+          function = Integer.parseInt(functions);
+          if (function >= 5){
+            System.out.println("If you decide ot put a number that is not 1, 2, 3, or 4 into the system again, I will be forced to kill you.");
+          }
+          else {
+            loop3 = 101;
+            loop4 = 2;
+            break;
+          }
+        }
+        while (loop4 <= 100){
+          try {
+            loop2 = 101;
+            System.out.println("Number 1, then number 2");
+            functions = things.nextLine();
+            num1 = Double.parseDouble(functions);
+            functions = things.nextLine();
+            num2 = Double.parseDouble(functions);
+            longL = myMethod(function, num1, num2);
+            if (longL == 1){
+              loop2 = 2;
+              loop3 = 1;
+              loop4 = 2;
+            }
+            loop4 = 101;
+          }
+          catch (Exception e) {
+            System.out.println("please type in only numbers . . . YOU FOOL!");
+          }
+        }
+      }
+      catch (Exception e) {
+      System.out.println("please type in only numbers . . . YOU FOOL!");
+      }
+    }
+  }
+  
+}
