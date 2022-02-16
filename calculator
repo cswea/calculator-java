@@ -15,6 +15,8 @@ class Main {
           choice2 = Integer.parseInt(choices);
           if (choice2 == 1){
             System.out.println(number1 + number2);
+            loop = 101;
+            return 2;
           }
           else if (choice2 == 2);{
             return 1;
@@ -26,6 +28,8 @@ class Main {
           choice2 = Integer.parseInt(choices);
           if (choice2 == 1){
             System.out.println(number1 - number2);
+            loop = 101;
+            return 2;
           }
           else if (choice2 == 2);{
             return 1;
@@ -37,6 +41,8 @@ class Main {
           choice2 = Integer.parseInt(choices);
           if (choice2 == 1){
             System.out.println(number1 * number2);
+            loop = 101;
+            return 2;
           }
           else if (choice2 == 2);{
             return 1;
@@ -48,6 +54,8 @@ class Main {
           choice2 = Integer.parseInt(choices);
           if (choice2 == 1){
             System.out.println(number1 / number2);
+            loop = 101;
+            return 2;
           }
           else if (choice2 == 2);{
             return 1;
@@ -80,7 +88,7 @@ class Main {
           functions = things.nextLine();
           function = Integer.parseInt(functions);
           if (function >= 5){
-            System.out.println("If you decide ot put a number that is not 1, 2, 3, or 4 into the system again, I will be forced to kill you.");
+            System.out.println("If you decide to put a number that is not 1, 2, 3, or 4 into the system again, I will be forced to kill you.");
           }
           else {
             loop3 = 101;
